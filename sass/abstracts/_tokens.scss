@@ -1,0 +1,157 @@
+@use "colors" as *;
+@use "typography" as *;
+@use "sizes" as *;
+
+// ** Contextual **
+$color-text-default: $color-secondary-700;
+$color-background-default: $color-secondary-100;
+$color-text-interactive-default: $color-neutral-100;
+$color-text-interactive-hover: $color-primary-300;
+
+$letter-spacing-wide: 0.16em;
+
+// border-radius
+$border-radius-1: $size-2;
+$border-radius-2: $size-4;
+
+// shadows
+$box-shadow-1: 0 $size-1 $size-4 rgb(0 0 0 / 0.05);
+$box-shadow-2: 0 $size-1 $size-4 rgb(0 0 0 / 0.15);
+
+// ** Body **
+
+$body-font-family: $font-family-base;
+$body-font-size: $font-size-400;
+$body-font-weight: $font-weight-default;
+$body-line-height: 1.5;
+$body-text-color: $color-text-default;
+$body-background-color: $color-background-default;
+
+$link-color: $color-text-interactive-default;
+$link-color-hover: $color-text-interactive-hover;
+
+// heading
+$heading-font-family: $font-family-accent;
+$heading-font-weight: $font-weight-bold;
+$heading-line-height: 1.1;
+$heading-letter-spacing: $letter-spacing-wide;
+$heading-text-transform: uppercase;
+$heading-color-default: $body-text-color;
+
+//subheading
+$subheading-font-family: $font-family-base;
+$subheading-font-weight: $font-weight-default;
+$subheading-font-size: $font-size-600;
+$subheading-line-height: $body-line-height;
+$subheading-color-default: $color-text-default;
+
+// ** Layout **
+
+// gap in flex and grids
+$grid-gap: $size-6;
+$flex-group-gap: $size-4;
+
+// sections padding
+$hero-padding-block: clamp(24rem, 15vh, 32rem);
+$section-padding-block: clamp(8rem, 10vh, 9.6rem);
+$footer-padding-block: $size-8;
+
+$card-body-padding: $size-8;
+
+$container-min-margin-inline: $size-4; // 16px
+$container-max-width: 102.4rem; // 1024px
+$container-max-width-narrow: 64rem; // 640px
+$container-max-width-wide: 160rem; // 1600px
+
+// ** Components **
+
+// Site header
+$site-header-justification: space-between;
+$site-header-alignment: start;
+$site-header-margin: 0;
+$site-header-padding: $size-8 0;
+$site-header-background-color: $color-secondary-800;
+$site-header-color: $color-neutral-100;
+
+// Navigation
+$nav-spacing: $size-9;
+$nav-font-family: $font-family-accent;
+$nav-font-size: $font-size-400;
+$nav-font-weight: $font-weight-bold;
+$nav-letter-spacing: $letter-spacing-wide;
+$nav-color: $link-color;
+$nav-color-hover: $link-color-hover;
+
+// Buttons
+$button-padding: 0.75em 1.5em;
+$button-border: 0;
+$button-border-radius: $border-radius-1;
+$button-outline: transparent;
+
+$button-font-family: $body-font-family;
+$button-font-size: $font-size-600;
+$button-font-weight: $font-weight-bold;
+$button-text-transform: none;
+
+// primary button
+$button-primary-color: $color-neutral-100;
+$button-primary-background: $color-primary-400;
+$button-primary-color-hover: $color-neutral-100;
+$button-primary-background-hover: $color-primary-500;
+
+// secondary button
+$button-secondary-color: $color-neutral-100;
+$button-secondary-background: $color-secondary-700;
+$button-secondary-color-hover: $color-neutral-100;
+$button-secondary-background-hover: $color-secondary-800;
+
+// Cards
+$card-flow-spacing: $size-2;
+$card-padding: $size-8;
+$card-border-radius: $border-radius-2;
+$card-background-default: $color-secondary-100;
+$card-box-shadow: $box-shadow-1;
+$card-font-family: $body-font-family;
+$card-color-default: $color-secondary-700;
+$card-line-height: 1.25;
+
+$card-heading-font-size: $font-size-600;
+$card-heading-color-default: $card-color-default;
+
+// Form
+$form-label-font-family: $body-font-family;
+$form-label-font-size: $body-font-size;
+$form-label-font-weight: $font-weight-semi-bold;
+$form-label-color: $body-text-color;
+
+$form-input-padding: $size-3;
+$form-input-border-default: 3px solid $color-secondary-200;
+$form-input-border-radius: $border-radius-1;
+$form-input-border-focus: 3px solid $color-secondary-400;
+$form-input-background-color: $color-neutral-100;
+$form-input-font-family: $body-font-family;
+$form-input-font-size: $body-font-size;
+$form-input-font-weight: $font-weight-semi-bold;
+$form-input-color: $body-text-color;
+
+$form-placeholder-font-family: $form-input-font-family;
+$form-placeholder-font-size: $body-font-size;
+$form-placeholder-font-weight: $form-input-font-weight;
+$form-placeholder-color: $color-secondary-300;
+
+// Footer
+$footer-background-color: $color-secondary-800;
+
+$footer-heading-font-family: $font-family-accent;
+$footer-heading-font-weight: $font-weight-default;
+$footer-heading-font-size: $font-size-500;
+$footer-heading-color: $color-secondary-300;
+$footer-heading-text-transform: $heading-text-transform;
+
+$footer-text-font-family: $body-font-family;
+$footer-text-font-weight: $body-font-weight;
+$footer-text-font-size: $body-font-size;
+$footer-text-color: $color-secondary-300;
+
+$footer-link-font-family: $font-family-accent;
+$footer-link-font-weight: $font-weight-bold;

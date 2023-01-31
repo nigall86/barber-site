@@ -7,6 +7,14 @@ html {
   // 10px/16px = 62.5% -> 1rem = 10px
   font-size: 62.5%;
 
+  //@include mq(medium) {
+  //  font-size: 56.25%; // 1rem = 9px;
+  //}
+  //
+  //@include mq(small) {
+  //  font-size: 50%; // 1rem = 8px;
+  //}
+
   //@include respond(tab-land) {
   //  //width < 1200?
   //  font-size: 56.25%; //1rem = 9px, 9px/16px = 56.25%
@@ -24,14 +32,23 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: $ff-base;
-  font-weight: $fw-400;
-  font-size: fs(400);
-  line-height: lh(150);
-  color: clr(neutral, 400);
+  background: $body-background-color;
+  font-family: $body-font-family;
+  font-weight: $body-font-weight;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  color: $body-text-color;
+}
+
+a {
+  color: $link-color;
+}
+
+a:is(:hover, :focus) {
+  color: $link-color-hover;
 }
 
 ::selection {
-  background-color: clr(primary, 400);
-  color: clr(neutral, 100);
+  background-color: $color-primary-400;
+  color: $color-neutral-100;
 }

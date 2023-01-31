@@ -1,37 +1,44 @@
-$ff-serif: "Abril Fatface", serif;
-$ff-sans: "Lato", sans-serif;
+$-ff-sans: "Source Sans Pro", sans-serif;
+$-ff-serif: "Alegreya SC", serif;
 
-$ff-accent: $ff-serif;
-$ff-base: $ff-sans;
+$font-family-accent: $-ff-serif;
+$font-family-base: $-ff-sans;
 
+// font sizes
 $font-sizes: (
-  // 80 px
-  900: clamp(4.8rem, 5.333vw + 1.6rem, 8rem),
-  // 60px
-  800: clamp(4rem, 3.333vw + 2rem, 6rem),
-  // 32px
-  700: clamp(2.4rem, 1.333vw + 1.6rem, 3.2rem),
-  // 28px
-  600: clamp(2rem, 1.333vw + 1.2rem, 2.8rem),
-  // 20px
-  500: 2rem,
-  // 18px
-  400: 1.8rem,
-  // 16px
-  300: 1.6rem
+  "small": (
+    "900": 6rem,
+    "800": 3.6rem,
+    "700": 2.8rem,
+    "600": 2.1rem,
+    "500": 1.8rem,
+    "400": 1.6rem,
+  ),
+  "large": (
+    "900": 6rem,
+    "800": 4.8rem,
+    "700": 2.8rem,
+    "600": 2.1rem,
+    "500": 1.8rem,
+    "400": 1.6rem,
+  ),
 );
 
+$font-size-400: var(--fs-400);
+$font-size-500: var(--fs-500);
+$font-size-600: var(--fs-600);
+$font-size-700: var(--fs-700);
+$font-size-800: var(--fs-800);
+$font-size-900: var(--fs-900);
+
 //font weight
-$fw-400: 400;
-$fw-700: 700;
+$-fw-400: 400;
+$-fw-500: 500;
+$-fw-700: 700;
 
-.fw-regular {
-  font-weight: $fw-400;
-}
-
-.fw-bold {
-  font-weight: $fw-700;
-}
+$font-weight-default: $-fw-400;
+$font-weight-semi-bold: $-fw-500;
+$font-weight-bold: $-fw-700;
 
 //line heights
 $line-heights: (

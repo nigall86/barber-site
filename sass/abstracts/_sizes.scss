@@ -1,26 +1,42 @@
 // 1rem = 10px
+
+// for creating utility classes
 $sizes: (
-  8: 0.8rem,
-  12: 1.2rem,
-  16: 1.6rem,
-  20: 2rem,
-  24: 2.4rem,
-  32: 3.2rem,
-  36: 3.6rem,
-  40: 4rem,
-  48: 4.8rem,
+  1: 0.4rem,
+  2: 0.8rem,
+  3: 1.2rem,
+  4: 1.6rem,
+  5: 2rem,
+  6: 2.4rem,
+  7: 2.8rem,
+  8: 3.2rem,
+  9: 4rem,
+  10: 4.8rem,
+  11: 6rem,
+  12: 8rem,
+  13: 9.6rem,
+  14: 12rem,
+  15: 16rem,
 );
 
-// sections padding
-$hero-padding: clamp(25.6rem, 15vh, 32rem);
-$section-padding: clamp(4.8rem, 10vh, 11.2rem);
+// for use in the code base
+$size-1: 0.4rem;
+$size-2: 0.8rem;
+$size-3: 1.2rem;
+$size-4: 1.6rem;
+$size-5: 2rem;
+$size-6: 2.4rem;
+$size-7: 2.8rem;
+$size-8: 3.2rem;
+$size-9: 4rem;
+$size-10: 4.8rem;
+$size-11: 6rem;
+$size-12: 8rem;
+$size-13: 9.6rem;
+$size-14: 12rem;
+$size-15: 16rem;
 
-$card-body-padding: clamp(3.2rem, 2.5vw, 8rem);
-
-// gap in flex and grids
-$grid-gap: 1.6rem;
-$flex-group-gap: 1.6rem;
-
-$container-inline-padding: 3.2rem; //32px
-$container-max-width: 112rem; //1120px
-$container-max-width-wide: 160rem;
+// fluid sizes
+$size-fluid-1: clamp($size-2, 2vw, $size-4);
+$size-fluid-2: clamp($size-4, 2vw, $size-8);
+$size-fluid-3: clamp($size-9, 2vw, $size-11);

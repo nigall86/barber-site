@@ -1,21 +1,25 @@
 @use "../abstracts" as *;
 
 .primary-nav {
-  --flex-column-gap: #{size(48)};
-  font-family: $ff-accent;
-
-  ul {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $nav-spacing;
     list-style: none;
-  }
 
-  a {
-    font-size: fs(700);
-    color: clr(neutral, 100);
-    text-decoration: none;
+    a {
+      font-family: $nav-font-family;
+      font-weight: $nav-font-weight;
+      font-size: $nav-font-size;
+      color: $nav-color;
+      letter-spacing: $nav-letter-spacing;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
 
-    &:is(:hover, :focus) {
-      text-decoration: underline;
-      opacity: 0.7;
+      &:is(:hover, :focus) {
+        color: $nav-color-hover;
+      }
     }
   }
 }

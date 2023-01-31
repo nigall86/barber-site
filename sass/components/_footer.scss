@@ -1,0 +1,35 @@
+@use "../abstracts" as *;
+
+.primary-footer {
+  padding-block: $footer-padding-block;
+  background-color: $footer-background-color;
+
+  &__heading {
+    font-family: $footer-heading-font-family;
+    font-weight: $footer-heading-font-weight;
+    font-size: $footer-heading-font-size;
+    color: $footer-heading-color;
+    text-transform: $footer-heading-text-transform;
+    letter-spacing: $letter-spacing-wide;
+  }
+
+  &__text {
+    font-family: $footer-text-font-family;
+    font-weight: $footer-text-font-weight;
+    font-style: $footer-text-font-size;
+    color: $footer-text-color;
+  }
+
+  &__link {
+    display: inline-block;
+    font-family: $footer-link-font-family;
+    font-weight: $footer-link-font-weight;
+    color: $link-color;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:is(:hover, :focus) {
+      color: $link-color-hover;
+    }
+  }
+}

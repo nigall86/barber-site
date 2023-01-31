@@ -1,9 +1,13 @@
 @use "../abstracts" as *;
 
 // generating font sizes classes
-@each $size-name, $size-value in $font-sizes {
-  .fs-#{$size-name} {
-    font-size: $size-value;
+@each $screen-size, $size-map in $font-sizes {
+  @each $size-name, $size-value in $size-map {
+    @if $screen-size == small {
+      .fs-#{$size-name} {
+        font-size: var(--fs-#{$size-name});
+      }
+    }
   }
 }
 
@@ -14,12 +18,26 @@
   }
 }
 
+// assigning font families
 .ff-accent {
-  font-family: $ff-serif;
+  font-family: $font-family-accent;
 }
 
 .ff-base {
-  font-family: $ff-sans;
+  font-family: $font-family-base;
+}
+
+// font-weights
+.fw-regular {
+  font-weight: $font-weight-default;
+}
+
+.fw-semi-bold {
+  font-weight: $font-weight-semi-bold;
+}
+
+.fw-bold {
+  font-weight: $font-weight-bold;
 }
 
 // centering the text
@@ -33,22 +51,22 @@
 }
 
 // headings and subheadings
-.heading-primary {
-  font-family: $ff-accent;
-  font-size: fs(900);
-  line-height: lh(110);
+.heading-1 {
+  @include heading($font-size-900, $color-primary-400);
 }
 
-.subheading-primary {
-  font-family: $ff-base;
-  font-size: fs(600);
-  line-height: lh(120);
-  text-transform: uppercase;
+.heading-2 {
+  @include heading($font-size-800, $color-primary-400);
 }
 
-.heading-secondary {
-  font-size: fs(500);
-  font-weight: $fw-700;
-  line-height: lh(120);
-  text-transform: uppercase;
+.heading-3 {
+  @include heading($font-size-700, $color-secondary-400);
+}
+
+.subheading {
+  font-family: $subheading-font-family;
+  font-weight: $subheading-font-weight;
+  font-size: $subheading-font-size;
+  line-height: $subheading-line-height;
+  color: $subheading-color-default;
 }

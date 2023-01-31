@@ -2,22 +2,65 @@
 @use "sass:math";
 @use "sass:map";
 @use "breakpoints" as *;
+@use "tokens" as *;
 
+// mixin for all breakpoints
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      //1200px
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      //1800px
+      @content;
+    }
+  }
+}
+
+// mixin for breakpoint
 @mixin mq($size) {
   @if map.has-key($breakpoints, $size) {
     $breakpoint: map-get($breakpoints, $size);
-    @media screen and (min-width: $breakpoint) {
+    @media screen and (max-width: $breakpoint) {
       @content;
     }
   } @else if meta.type-of($size) == number {
     @if math.is-unitless($size) {
       @error 'when using a number with @mq() make sure to include a unit';
     } @else {
-      @media screen and (min-width: $size) {
+      @media screen and (max-width: $size) {
         @content;
       }
     }
   } @else {
     @error 'the keyword #{$size} is not in the $breakpoints map';
   }
+}
+
+@mixin heading($fs, $color: $heading-color-default) {
+  font-family: $heading-font-family;
+  font-size: $fs;
+  font-weight: $heading-font-weight;
+  color: $color;
+  line-height: $heading-line-height;
+  letter-spacing: $heading-letter-spacing;
+  text-transform: $heading-text-transform;
 }
