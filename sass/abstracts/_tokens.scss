@@ -1,6 +1,6 @@
-@use "colors" as *;
-@use "typography" as *;
-@use "sizes" as *;
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'sizes' as *;
 
 // ** Contextual **
 $color-text-default: $color-secondary-700;
@@ -67,7 +67,7 @@ $container-max-width-wide: 160rem; // 1600px
 
 // Site header
 $site-header-justification: space-between;
-$site-header-alignment: start;
+$site-header-alignment: flex-start;
 $site-header-margin: 0;
 $site-header-padding: $size-8 0;
 $site-header-background-color: $color-secondary-800;
